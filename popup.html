@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="w-50"><p id="website-name"></p></div>
+    <h2 class="title w-50">Product Extractor</h2>
+  </div>
+
+  <!-- Add a new section to display the website name -->
+  
+  <div class="container countProductSection">
+    <div class="w-50"><button id="count-products">Count Products</button></div>
+    <div class="w-50">
+      <div id="loading" class="hidden">
+        <div class="loading-spinner"></div>
+        Loading...
+      </div>
+      <p class="productCount" id="product-count"></p>
+    </div>
+  </div>
+
+  <div class="productTable">
+    <table id="product-table" class="hidden">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Regular Price</th>
+          <th>Sale Price</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="downloadSectionsContainer">
+    <div class="downloadSections">
+      <div class="w-50">
+        <input id="file-name" type="text" placeholder="Enter file name" />
+        <p id="message-area" class="hidden fileNameErorMessage" style="color: red; font-size: 14px;"></p>
+      </div>
+      <div class="w-50">
+        <button id="extract-products" disabled>Download CSV</button>
+        <button id="extract-products-xlsx" disabled>Download XLSX</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="xlsx.full.min.js"></script>
+</body>
+</html>
