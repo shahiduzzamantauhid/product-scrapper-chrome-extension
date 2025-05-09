@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Extractor</title>
   <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
   <div class="header">
-    <div class="w-50"><p id="website-name"></p></div>
+    <div class="w-50">
+      <p id="website-name"></p>
+    </div>
     <h2 class="title w-50">Product Extractor</h2>
   </div>
 
   <!-- Add a new section to display the website name -->
-  
+
   <div class="container countProductSection">
+    <div class="">
+      <a id="super_suply" href="https://supersupplys.com/account/login" class="web_url">SS</a>
+      <a  id="one_whole" href="https://www.onewholesale.ca/account/login" class="web_url">OW</a>
+      <a id="sky_blue" href="https://www.skybluewholesale.com/login" class="web_url">SB</a>
+      <a id="nt_cash" href="https://www.ntcashcarry.com/login.php" class="web_url">NT</a>
+    </div>
     <div class="w-50"><button id="count-products">Count Products</button></div>
     <div class="w-50">
       <div id="loading" class="hidden">
@@ -56,4 +66,5 @@
   <script src="popup.js"></script>
   <script src="xlsx.full.min.js"></script>
 </body>
+
 </html>

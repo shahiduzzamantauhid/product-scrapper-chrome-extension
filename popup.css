@@ -61,7 +61,16 @@ body {
   letter-spacing: 0.5px;
   margin-left: 15px;
 }
-
+.web_url{
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+  margin-left:5px;
+  background-color: #ffd000;
+  border-radius:8px;
+}
 .logoImage {
   max-width: 120px;
   transition: transform 0.3s ease;
@@ -152,7 +161,7 @@ th {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   background: linear-gradient(135deg, #ffd000, #ffe600b0);
  

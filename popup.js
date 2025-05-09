@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (tab && tab.url) {
       const url = new URL(tab.url);
-      return url.hostname; // Extract the hostname (e.g., "supersupplys.com")
+      if (url.hostname === 'supersupplys.com' || url.hostname === 'www.onewholesale.ca' || url.hostname === 'www.skybluewholesale.com' || url.hostname === 'www.ntcashcarry.com') {
+        return url.hostname;
+      }else{
+        null;
+      }
+       //url.hostname; // Extract the hostname (e.g., "supersupplys.com")
     }
     return null;
   }
@@ -25,8 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
   getWebsiteName().then((websiteName) => {
     if (websiteName) {
       document.getElementById('website-name').textContent = `${websiteName}`;
-    } else {
-      document.getElementById('website-name').textContent = 'Website name not available';
+      if (websiteName === 'supersupplys.com') {
+        document.getElementById('super_suply').style.backgroundColor = '#000';
+        document.getElementById('super_suply').style.color = 'white';
+        } else if (websiteName === 'www.onewholesale.ca') {
+        document.getElementById('one_whole').style.backgroundColor = '#000';
+        document.getElementById('one_whole').style.color = 'white';
+        }
+      else if (websiteName === 'www.skybluewholesale.com') {
+        document.getElementById('sky_blue').style.backgroundColor = '#000';
+        document.getElementById('sky_blue').style.color = 'white';
+        }
+      else if (websiteName === 'www.ntcashcarry.com') {
+        document.getElementById('nt_cash').style.backgroundColor = '#000';
+        document.getElementById('nt_cash').style.color = 'white';
+        }
+
+
+      } else {
+      document.getElementById('website-name').textContent = 'Unavailable';
     }
   });
 
